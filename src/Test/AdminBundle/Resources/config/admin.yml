@@ -1,0 +1,12 @@
+services:
+    sonata.admin.User:
+        class: Test\AdminBundle\Admin\UserAdmin
+        arguments: [~, Test\AdminBundle\Entity\User, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: User}
+
+    sonata.admin.Task:
+        class: Test\AdminBundle\Admin\TaskAdmin
+        arguments: [~, Test\AdminBundle\Entity\Task, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Task}
